@@ -19,3 +19,5 @@ Required Packages to install
 ## [Usage](#table-of-content)
 
 ## [Credits](#table-of-content)
+Without these guidances, my application would not exist.
+* [SchemaTypes](https://mongoosejs.com/docs/schematypes.html)
