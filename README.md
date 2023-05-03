@@ -21,3 +21,6 @@ Required Packages to install
 ## [Credits](#table-of-content)
 Without these guidances, my application would not exist.
 * [SchemaTypes](https://mongoosejs.com/docs/schematypes.html)
+* [SchemaTypes: Date](https://mongoosejs.com/docs/schematypes.html#dates)
+* [SchemaTypes: Getters/Setters](https://mongoosejs.com/docs/tutorials/getters-setters.html)
+* [Default](https://mongoosejs.com/docs/defaults.html)
