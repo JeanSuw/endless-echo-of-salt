@@ -30,13 +30,34 @@ function getMonthName (index){
     }
 };
 
+function getActualHour(){
+    if (timestampObj.getHours() === 0){
+        return 12;
+    }
 
-const timestampObj = new Date(timestamp);
+    if (timestampObj.getHours() > 12){
+        return Math.floor(timestampObj.getHours() - 12);
+    }else{
+        return timestampObj.getHours();
+    }
+}
 
-const date = timestampObj.getDate();
-const month = getMonthName(timestampObj.getMonth());
-const year = timestampObj.getFullYear();
+function getTime (){
+    const timestampObj = new Date(timestamp);
+
+    // Formated date, month, and year
+    const date = timestampObj.getDate();
+    const month = getMonthName(timestampObj.getMonth());
+    const year = timestampObj.getFullYear();
+    
+    // Formated times
+    const hours = getActualHour();
+    const minutes = timestampObj.getMinutes();
+    const period = timestampObj.getHours() >= 12 ? "pm" : "am";
+    
+    const actualDate = `${month} ${date}, ${year} at ${hours} : ${minutes} ${period}`;
+    return actualDate;
+}
 
 
-
-//module.export = ;
+module.export = getTime;

@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const getTime = require("../utils/getTime");
 
 const reactionSchema = new Schema(
     {
@@ -21,6 +22,7 @@ const reactionSchema = new Schema(
             type: Date,
             default: Date.now,
             // Use a getter method to format the timestamp on query
+            get: (timestamp) => getTime(timestamp)
         }
     },
     {
@@ -45,7 +47,7 @@ const thoughtSchema = new Schema(
             type: Date,
             default: Date.now,
             // getters method for date
-            get: getTime 
+            get: (timestamp) => getTime(timestamp),
         },
         userName:{
             type: String,
@@ -62,14 +64,10 @@ const thoughtSchema = new Schema(
     }
 );
 
-function getTime(whatDate){
-    return ''; // 
-}
-
-thoughtSchema.virtuals().get(function (){
+thoughtSchema.virtuals("reactionCount").get(function (){
     return this.reactionList.length;
 });
 
-const Thought = model();
+const Thought = model("Thought", thoughtSchema);
 
 module.exports = Thought;

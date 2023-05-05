@@ -27,3 +27,4 @@ Without these guidances, my application would not exist.
 * [Default](https://mongoosejs.com/docs/defaults.html)
 * [How to Convert Timestamp to Date Format in JavaScript](https://linuxhint.com/convert-timestamp-to-date-format-javascript/)
 * [Date.prototype.getFullYear()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear)
+* [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
