@@ -23,4 +23,7 @@ Without these guidances, my application would not exist.
 * [SchemaTypes](https://mongoosejs.com/docs/schematypes.html)
 * [SchemaTypes: Date](https://mongoosejs.com/docs/schematypes.html#dates)
 * [SchemaTypes: Getters/Setters](https://mongoosejs.com/docs/tutorials/getters-setters.html)
+* [SchemaTypes: Date](https://mongoosejs.com/docs/schematypes.html#dates)
 * [Default](https://mongoosejs.com/docs/defaults.html)
+* [How to Convert Timestamp to Date Format in JavaScript](https://linuxhint.com/convert-timestamp-to-date-format-javascript/)
+* [Date.prototype.getFullYear()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear)
