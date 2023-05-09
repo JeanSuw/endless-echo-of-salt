@@ -16,6 +16,12 @@ Required Packages to install
 * [Express.js](https://www.npmjs.com/package/express)
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 
+```bash
+npm i express
+npm i mongoose
+
+npm start
+```
 ## [Usage](#table-of-content)
 
 ## [Credits](#table-of-content)
