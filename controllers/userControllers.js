@@ -30,8 +30,8 @@ module.exports = {
     // Post or create a new user    
     async createUser(req, res) {
       try {
-        const dbUserData = await User.create(req.body);
-        res.json(dbUserData);
+        const user = await User.create(req.body);
+        res.json(user);
       } catch (err) {
         res.status(500).json(err);
       }
