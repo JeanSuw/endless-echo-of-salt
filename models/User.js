@@ -16,21 +16,33 @@ const userSchema = new Schema(
             required: true,
             // how to match?
         },
-        thoughts:{
-            type: Schema.Types.ObjectId,
-            ref: 'Thought'
-        },
-        users:{
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }
+        thoughts: 
+        [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought',
+            },
+        ],
+        friends:
+        [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
     },
+
     {
         toJSON: {
-        virtuals: true,
+            virtuals: true,
         },
         id: false,
     }
 );
 
+userSchema.virtual("friendCount").get(function () {
+    return this.friends.length;
+});
+
+const User = model("User", userSchema);
 module.exports = User;
