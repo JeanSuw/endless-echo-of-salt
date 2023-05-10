@@ -4,8 +4,8 @@ module.exports = {
     // get all users
     async getUsers(req, res) {
       try {
-        const users = await User.find();
-        res.json(users);
+        const userData = await User.find();
+        res.json(userData);
       } catch (err) {
         res.status(500).json(err);
       }
@@ -14,14 +14,14 @@ module.exports = {
     // get a single user by its _id and populated thought and friend data
     async getSingleUser(req, res) {
       try {
-        const user = await User.findOne({ _id: req.params.userId })
+        const userData = await User.findOne({ _id: req.params.userId })
           .select('-__v');
   
-        if (!user) {
+        if (!userData) {
           return res.status(404).json({ message: 'No user with that ID' });
         }
   
-        res.json(user);
+        res.json(userData);
       } catch (err) {
         res.status(500).json(err);
       }
@@ -30,8 +30,8 @@ module.exports = {
     // Post or create a new user    
     async createUser(req, res) {
       try {
-        const user = await User.create(req.body);
-        res.json(user);
+        const userData = await User.create(req.body);
+        res.json(userData);
       } catch (err) {
         res.status(500).json(err);
       }
@@ -39,17 +39,17 @@ module.exports = {
     // PUT to update a user by its _id
     async updateUser(req, res) {
         try {
-          const users = await User.findOneAndUpdate(
+          const userData = await User.findOneAndUpdate(
             { _id: req.params.id },
             { $set: req.body },
             { runValidators: true, new: true }
           );
     
-          if (!users) {
+          if (!userData) {
             return res.status(404).json({ message: 'No user with this id!' });
           }
     
-          res.json(users);
+          res.json(userData);
         } catch (err) {
           res.status(500).json(err);
         }
@@ -58,13 +58,13 @@ module.exports = {
     // DELETE to remove user by its _id
     async deleteUsers(req, res) {
         try {
-            const users = await User.findOneAndDelete({ _id: req.params.id });
+            const userData = await User.findOneAndDelete({ _id: req.params.id });
       
-            if (!users) {
+            if (!userData) {
               return res.status(404).json({ message: 'No User with that ID' });
             }
       
-            await Thought.deleteMany({ _id: { $in: users.users } });
+            await Thought.deleteMany({ _id: { $in: userData.thoughts} });
             res.json({ message: 'Both Thoughts and Users are deleted!' });
         } catch (err) {
             res.status(500).json(err);
