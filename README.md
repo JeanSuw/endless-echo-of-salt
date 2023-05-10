@@ -17,10 +17,12 @@ Required Packages to install
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 
 ```bash
+npm i node
 npm i express
 npm i mongoose
+npm i mongodb
 
-npm start
+node index.js
 ```
 ## [Usage](#table-of-content)
 
