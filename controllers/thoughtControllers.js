@@ -13,10 +13,6 @@ module.exports = {
   async getSingleThought(req, res) {
     try {
       const thoughtData = await Thought.findOne({ _id: req.params.id })
-        .populate({
-            path: "reactions",
-            select: '-__v',
-        })
         .select('-__v');
     
       if (!thoughtData) {
