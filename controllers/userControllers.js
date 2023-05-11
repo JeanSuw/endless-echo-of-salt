@@ -14,7 +14,7 @@ module.exports = {
     // get a single user by its _id and populated thought and friend data
     async getSingleUser(req, res) {
       try {
-        const userData = await User.findOne({ _id: req.params.userId })
+        const userData = await User.findOne({ _id: req.params.id })
           .select('-__v');
   
         if (!userData) {

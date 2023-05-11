@@ -2,7 +2,7 @@
 
 ## [Description](#table-of-content)
 
-EEOS is a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
+EEOS is a social network web application that uses noSQLs where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
 ## Table-of-Content
 * [Description](#description)
@@ -12,19 +12,61 @@ EEOS is a social network web application where users can share their thoughts, r
 
 
 ## [Installation](#table-of-content)
+This application is not deployed to Heroku, but it needs insomnia to run and test the functions. Insomnia is r
+
 Required Packages to install
 * [Express.js](https://www.npmjs.com/package/express)
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 
 ```bash
-npm i node
+// No need to install
+npm i node 
+
+// Packages to install
 npm i express
 npm i mongoose
 npm i mongodb
 
-node index.js
+// to run the program
+node index.js // or
+npm start
 ```
 ## [Usage](#table-of-content)
+To run the program, copy and paste this:
+```bash
+npm start
+```
+If you see this shows up, then you are on the right track
+```bash
+> endless-echo-of-salt@1.0.0 start
+> node index.js
+
+API server for this project running on port 3001!
+```
+
+Next, open insomnia app. If nothing is on the search section, add this line below
+```bash
+http://localhost:3001/api/users
+```
+
+For this walkthrough, we will start off with creating a user.<br>
+Change from GET to POST <br>
+Change Text to JSON to add new user <br>
+```
+{
+	"userName": "Aisuke",
+	"email": "hatGuy@gmail.com"
+}
+```
+To GET all user, you must change POST to GET.
+
+
+
+
+
+
+
+
 
 ## [Credits](#table-of-content)
 Without these guidances, my application would not exist.
