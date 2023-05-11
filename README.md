@@ -8,6 +8,7 @@ EEOS is a social network web application that uses noSQLs where users can share 
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Walkthrough](#walkthrough)
 * [Credits](#credits)
 
 
@@ -50,6 +51,7 @@ http://localhost:3001/api/users
 ```
 
 For this walkthrough, we will start off with creating a user.<br>
+I recommend using this [walkthough](./tutorials/User_Requests.webm) to understand how it work for each instruction.
 ### POST
 Change from GET to POST <br>
 Change Text to JSON to add new user <br>
@@ -100,6 +102,7 @@ You are welcome to check back to GET all users to see which user is deleted. Don
 
 ### POST create a thought
 Before you create a thought, please make sure that you have a user you can reference. If you don't have a user, you can create a [new one](#post).
+I recommend using this [walkthough](./tutorials/Thought_Requests.webm) to understand how it work for each instruction.
 
 To create a thought, copy this link below on the searchbar.
 ```bash
@@ -144,6 +147,13 @@ And then on the search bar, copy and paste this part. Delete the parenthesis and
 ```bash
 http://localhost:3001/api/thoughts/(paste the id here)
 ```
+
+When you want to close the server, go to your terminial and press Ctrl + C to shut the server.
+
+## [Walkthrough](#table-of-content)
+Here are the links to the user and thought requests.
+* [user](./tutorials/User_Requests.webm)
+* [thought](./tutorials/Thought_Requests.webm)
 
 ## [Credits](#table-of-content)
 Without these guidances, my application would not exist.
